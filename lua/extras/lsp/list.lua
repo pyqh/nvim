@@ -7,6 +7,7 @@ return {
     "emmet_ls",
     "eslint",
     "html",
+    "jdtls",
     "jsonls",
     "lua_ls",
     "marksman",
