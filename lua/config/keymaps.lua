@@ -8,6 +8,7 @@ end
 
 map("n", "<Space>", "<NOP>")
 map("n", "p", "<NOP>")
+map("n", "q", "<NOP>")
 
 -- msvim
 map("v", "<BS>", '"_d')
