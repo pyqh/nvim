@@ -16,7 +16,7 @@ return {
     "volar",
     "vtsls",
   },
-  other = {
+  nols = {
     "clang-format", -- c,java,etc
     "prettierd",
     -- prettier for jsx, angular, flow, vue, typescript, css, less, scss, html, json, markdown, yaml
