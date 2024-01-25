@@ -3,8 +3,8 @@ return {
     "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
-        c = { "clang_format" },
-        java = { "clang_format" },
+        -- c = { "clang_format" },
+        java = { "google-java-format" },
         lua = { "stylua" },
         javascript = { "prettierd" },
         typescript = { "prettierd" },
@@ -18,7 +18,7 @@ return {
         json = { "prettier" },
         jsonc = { "prettier" },
         yaml = { "prettier" },
-        python = { "isort", "black" },
+        -- python = { "isort", "black" },
         markdown = { "prettierd", "markdownlint" },
       },
       format_on_save = { timeout_ms = 500, lsp_fallback = true },

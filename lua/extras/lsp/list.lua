@@ -1,6 +1,6 @@
 -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
 return {
-  ls = {
+  lsp = {
     "clangd",
     "cssls",
     "dockerls",
@@ -16,13 +16,15 @@ return {
     "volar",
     "vtsls",
   },
-  nols = {
-    "clang-format", -- c,java,etc
+  nolsp = {
+    -- "clang-format", -- c,java,etc
+    "google-java-format",
     "prettierd",
+    "prettier",
     -- prettier for jsx, angular, flow, vue, typescript, css, less, scss, html, json, markdown, yaml
     "stylua", -- lua
-    "black", -- *python
-    "isort", -- python
+    -- "black", -- *python
+    -- "isort", -- python
     "markdownlint", -- markdown
     "efm",
     -- general language server

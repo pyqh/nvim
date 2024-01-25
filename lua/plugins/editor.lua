@@ -3,9 +3,25 @@ return {
     "nvim-telescope/telescope.nvim",
     version = false,
     dependencies = {
-      "nvim-lua/plenary.nvim"
+      "nvim-lua/plenary.nvim",
     },
     config = function()
+      local builtin = require("telescope.builtin")
+      local function project_files()
+        local is_inside_work_tree = {}
+        local cwd = vim.fn.getcwd()
+        if is_inside_work_tree[cwd] == nil then
+          vim.fn.system("git rev-parse --is-inside-work-tree")
+          is_inside_work_tree[cwd] = vim.v.shell_error == 0
+        end
+        if is_inside_work_tree[cwd] then
+          builtin.git_files()
+        else
+          builtin.find_files()
+        end
+      end
+      vim.keymap.set("n", "rg", builtin.live_grep)
+      vim.keymap.set("n", "<leader>p", project_files)
       require("telescope").setup({
         defaults = {
           prompt_prefix = "   ",
@@ -23,11 +39,6 @@ return {
         },
       })
     end,
-    keys = {
-      { "<C-p>", "<cmd>Telescope find_files<cr>" },
-      { "<leader>p", "<cmd>Telescope git_files<cr>" },
-      { "rg", "<cmd>Telescope live_grep<cr>" },
-    },
   },
   {
     "nvim-neo-tree/neo-tree.nvim",

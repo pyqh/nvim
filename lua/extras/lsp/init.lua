@@ -5,7 +5,7 @@ local default_config = require("extras.lsp.default_config")
 
 local servers_handlers = {}
 -- 合并默认配置和自定义配置
-for _, value in pairs(list.ls) do
+for _, value in pairs(list.lsp) do
   local status, config = pcall(require, "extras.lsp.server_config." .. value)
   if not status then
     config = {}
@@ -19,14 +19,14 @@ end
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-  ensure_installed = list.ls,
+  ensure_installed = list.lsp,
   handlers = servers_handlers,
 })
 
 -- Install third party package
 local mr = require("mason-registry")
 local function ensure_installed()
-  for _, tool in ipairs(list.nols) do
+  for _, tool in ipairs(list.nolsp) do
     local p = mr.get_package(tool)
     if not p:is_installed() then
       p:install()
