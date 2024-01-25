@@ -11,9 +11,9 @@ return {
     "jsonls",
     "lua_ls",
     "marksman",
-    "pyright",
+    -- "pyright",
     "tailwindcss",
-    "volar",
+    -- "volar",
     "vtsls",
   },
   nolsp = {

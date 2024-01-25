@@ -1,7 +1,3 @@
-if string.find(vim.fn.getcwd(), "/mnt")  then -- wsl
-  return{}
-end
-
 return {
   {
     "neovim/nvim-lspconfig",
