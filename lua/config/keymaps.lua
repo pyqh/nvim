@@ -45,7 +45,6 @@ map("n", "=", "<C-a>")
 map("n", "-", "<C-x>")
 
 --  quit and reload
--- map("n", "<leader>s", "<cmd>so %<CR>")
 map("n", "<C-q>", "<cmd>q!<CR>")
 map("i", "<C-q>", "<NOP>")
 
@@ -79,7 +78,3 @@ map("n", "<leader>k", "<cmd>bprevious<CR>")
 
 -- 取消高亮
 map("n", "<ESC>", "<cmd>nohl<CR>")
-
--- terminal
-map("n", "<C-t>", "<cmd>tab terminal<CR>")
-map("t", "<ESC>", "<C-\\><C-n>")
