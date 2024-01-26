@@ -1,7 +1,13 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_python_provider = 0
+vim.g.loaded_python3_provider = 0
+
 local opt = vim.opt
--- opt.shell = "powershell"
 
 -- 行号
 opt.number = true
@@ -24,7 +30,7 @@ opt.mouse = "a"
 -- 系统剪贴板
 -- opt.clipboard = "unnamedplus"
 -- opt.clipboard:append("unnamedplus")
-opt.clipboard:append { 'unnamed', 'unnamedplus' }
+opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 -- 默认新窗口右和下
 opt.splitright = true
@@ -40,6 +46,3 @@ opt.signcolumn = "yes"
 
 opt.swapfile = false
 opt.backup = false
-
--- opt.spell = true
--- opt.spelllang = "en_us"
