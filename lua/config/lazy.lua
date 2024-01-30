@@ -12,6 +12,9 @@ require("lazy").setup({
   spec = { { import = "plugins" } },
   defaults = { lazy = false, version = false },
   install = { colorscheme = nil },
+  change_detection = {
+    enabled = false,
+  },
   performance = {
     rtp = {
       disabled_plugins = {
