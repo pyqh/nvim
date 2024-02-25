@@ -10,11 +10,9 @@ map("n", "<Space>", "<NOP>")
 map("n", "p", "<NOP>")
 map("n", "q", "<NOP>")
 
--- msvim
 map("v", "<BS>", '"_d')
 map("v", "<C-x>", '"+x')
 map("v", "<C-c>", '"+y')
--- map("n", "<C-v>", '"+gP')
 -- Save
 map("n", "<C-s>", "<cmd>w<CR>")
 map("i", "<C-s>", "<cmd>w<CR>")
@@ -73,8 +71,8 @@ map("v", "<S-j>", ":m '>+1<CR>gv=gv")
 map("v", "<S-k>", ":m '<-2<CR>gv=gv")
 
 -- 切换buffer
-map("n", "<leader>j", "<cmd>bnext<CR>")
-map("n", "<leader>k", "<cmd>bprevious<CR>")
+map("n", "<A-j>", "<cmd>bnext<CR>")
+map("n", "<A-k>", "<cmd>bprevious<CR>")
 
 -- 取消高亮
 map("n", "<ESC>", "<cmd>nohl<CR>")
