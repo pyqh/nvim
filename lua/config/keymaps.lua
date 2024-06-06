@@ -1,5 +1,3 @@
--- See: https://neovim.io/doc/user/intro.html#key-notation
-
 vim.g.mapleader = " "
 local opts = { noremap = true, silent = true }
 local function map(mode, lhs, rhs)
